@@ -1,6 +1,8 @@
 /*
   Milim.ts
-  TypeScript model
+  TypeScript model : DiscordX
+
+  By: @zDragonSK
 */
 import 'dotenv/config';
 import {GatewayIntentBits, Events} from 'discord.js';
@@ -10,8 +12,14 @@ import {importx, dirname} from '@discordx/importer';
 // Make an app client
 const client = new Client({
   intents: [
+    GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessages
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessageReactions,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.DirectMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildModeration
   ],
   silent: false
 });
