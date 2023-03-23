@@ -3,15 +3,13 @@ import { Category } from '@discordx/utilities';
 import { CommandInteraction } from 'discord.js';
 
 @Discord()
-@Category('Experimental')
-export default class HelloCommand {
+@Category('info')
+export default class testCmd {
     @Slash({
         name: 'test',
         description: 'Just a test command'
     })
-    async hello(interaction: CommandInteraction) {
-        await interaction.reply({
-            content: `Hello, ${interaction.member}!`
-        });
+    async test(interaction: CommandInteraction) {
+        await interaction.reply({ content: `This is a Test, ${interaction.member}!` });
     }
 }
