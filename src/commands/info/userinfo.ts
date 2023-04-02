@@ -11,8 +11,8 @@ export class userinfo {
   })
   userinfo(
     @SlashOption({
-      description: "Member to display the informations.",
       name: "member",
+      description: "Member to display the informations.",
       required: true,
       type: ApplicationCommandOptionType.User,
     })
