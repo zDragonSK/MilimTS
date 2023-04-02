@@ -5,10 +5,13 @@ import { ApplicationCommandOptionType, CommandInteraction, User, EmbedBuilder } 
 @Discord()
 @Category('info')
 export class userinfo {
-  @Slash({ name: 'userinfo', description: "userinfo" })
+  @Slash({
+    name: 'userinfo',
+    description: "View a user's information."
+  })
   userinfo(
     @SlashOption({
-      description: "View a user's information.",
+      description: "Member to display the informations.",
       name: "member",
       required: true,
       type: ApplicationCommandOptionType.User,
