@@ -8,6 +8,8 @@
     "build:changelog": "npx @discordx/changelog --src src",
     "dev": "ts-node-esm src/index.ts",
     "start": "node build/index.js",
+    "build:start": "npm run build && npm run start",
+    "clear": "rm -rf build",
     "watch": "nodemon --exec ts-node-esm src/index.ts"
   },
   "dependencies": {

@@ -14,8 +14,8 @@ export class avatar {
     @SlashOption({
       description: "Member to display the avatar.",
       name: "member",
-      required: true,
-      type: ApplicationCommandOptionType.User
+      type: ApplicationCommandOptionType.User,
+      required: true
     })
     member: User,
     interaction: CommandInteraction,
@@ -23,8 +23,9 @@ export class avatar {
     const user = interaction.guild?.members.cache.get(member.id);
     const avatar = user?.user.avatarURL({ size: 1024 });
     const embed = new EmbedBuilder()
-      .setTitle(`${user?.user.tag}'s Avatar`)
+      .setTitle(`${user?.user.username}'s Avatar`)
       .setImage(`${avatar}`)
+      .setColor("#2f3136")
       .setTimestamp();
     await interaction.reply({content: `${member}`, embeds: [embed]});
   }
