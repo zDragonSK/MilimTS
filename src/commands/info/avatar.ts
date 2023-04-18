@@ -1,7 +1,6 @@
 import { Client, Discord, Slash, SlashOption } from 'discordx';
 import { Category } from '@discordx/utilities';
 import { ApplicationCommandOptionType, CommandInteraction, User, Embed, EmbedBuilder } from 'discord.js';
-import 'dotenv/config';
 
 @Discord()
 @Category('info')

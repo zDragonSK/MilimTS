@@ -1,7 +1,14 @@
 # Milim.ts
-I am learning to use DiscordX in conjunction with TypeScript. So I'm working on this code to practice and serve as an application on servers that I own.
+*A Discord application (bot) made using the Discord library.*
 
-### Our links
-https://discord.gg/DS6R8QjhHU
+### Application purpose
+As I'm creating this bot to test DiscordX, I focused only on moderation and utilities of the servers I'm on. I don't have any grand or special goals for this application.
 
-https://github.com/0x29E3
+### How to run
+To run the application, you need to create an `.env` file, and then build it using `npm run build:start`. It is necessary that you already have an application registered on the [Discord developer portal](https://discord.com/developers) and have your token.
+
+### .env proto:
+```.env
+TOKEN="Your_token_here"
+```
+
