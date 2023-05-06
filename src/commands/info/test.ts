@@ -4,7 +4,7 @@ import { CommandInteraction } from 'discord.js';
 
 @Discord()
 @Category('info')
-export default class testCmd {
+export class testCmd {
     @Slash({
         name: 'test',
         description: 'Just a test command'
